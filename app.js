@@ -51,7 +51,7 @@ app.get("/register", (req, res) => {
 app.post("/register", (req, res) => {
     const newUser = new User({
         email: req.body.username,
-        password: rmd5(eq.body.password)
+        password: md5(eq.body.password)
     });
     newUser.save(err => {
         if (err) {
